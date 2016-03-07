@@ -13,7 +13,7 @@ two:
   course_id: 1
 
 three:
-  price: 9.99
+  price: 10.00
   name: "Short Rib Wontons"
   description: "Braised beef with pepper-basil jam, cilantro, and creamed chevre."
   course_id: 1
@@ -31,9 +31,9 @@ five:
   course_id: 2
 
 six:
-  price: 9.99
-  name: MyString
-  description: MyText
+  price: 10.00
+  name: "Steamed Buns"
+  description: "Fried chicken inside sesame buns with kim chi pickles, gochujang aioli, and sriracha."
   course_id: 2
 
 seven:
