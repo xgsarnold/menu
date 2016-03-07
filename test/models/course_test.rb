@@ -7,7 +7,8 @@ class CourseTest < ActiveSupport::TestCase
   end
 
   test "course has many dishes" do
-    assert Course.dishes
+    entree = Course.new(name: "entrees")
+    assert entree.dishes
   end
-  
+
 end

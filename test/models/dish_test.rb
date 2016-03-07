@@ -10,9 +10,8 @@ class DishTest < ActiveSupport::TestCase
   test "dishes belong to a course" do
     ramen = Dish.new(name: "Tonkotsu", description: "yummy")
     entree = Course.new(name: "entree")
-    entree << ramen
-    assert_equal 1, dishes(:one).course_id
-    assert_equal 1, ramen.course_id
+    entree.dishes << ramen
+    assert_equal entree.dishes, [ramen]
   end
 
 end
