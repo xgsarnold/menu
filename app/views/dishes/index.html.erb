@@ -20,6 +20,7 @@
         <td><%= link_to "#{dish.name}", edit_dish_path(dish) %></td>
         <td><%= dish.description %></td>
         <td><%= dish.course_id %></td>
+        <td><%= link_to 'Show', edit_dish_path(dish) %></td>
       </tr>
     <% end %>
   </tbody>
