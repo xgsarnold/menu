@@ -2,14 +2,14 @@
 
 <h1>Menu</h1>
 
-<%= @courses.each do |course| %><br>
+<% @courses.each do |course| %><br>
 <div>
   <div>
     <h4>
       <%= course.name %><br>
       <h6>
-      <%= link_to "Add Dish", new_dish_path %><br>
-      </h6>
+      <%= link_to "Add Dish", new_dish_path(course_id: course_id) %><br>
+    </h6>
       <% if course.id == 1 %>
         <%= image_tag asset_url("cherry.png"), id: "course_1" %>
       <% elsif course.id == 2 %>
@@ -23,7 +23,7 @@
       <% end %>
   </div>
   <div>
-      <%= course.dishes.each do |dish| %>
+      <% course.dishes.each do |dish| %>
       <p>$<%= dish.price %></p>
       <p><%= link_to "#{dish.name}", edit_dish_path(dish) %></p>
       <p><%= dish.description %></p>
