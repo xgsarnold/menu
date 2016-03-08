@@ -30,10 +30,10 @@ class DishesController < ApplicationController
     respond_to do |format|
       if @dish.save
         format.html { redirect_to dishes_path, notice: 'Dish was successfully created.' }
-        format.json { render :show, status: :created, location: @dish }
+        # format.json { render :show, status: :created, location: @dish }
       else
         format.html { render :new }
-        format.json { render json: @dish.errors, status: :unprocessable_entity }
+        # format.json { render json: @dish.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -44,10 +44,10 @@ class DishesController < ApplicationController
     respond_to do |format|
       if @dish.update(dish_params)
         format.html { redirect_to dishes_path, notice: 'Dish was successfully updated.' }
-        format.json { render :show, status: :ok, location: @dish }
+        # format.json { render :show, status: :ok, location: @dish }
       else
         format.html { render :edit }
-        format.json { render json: @dish.errors, status: :unprocessable_entity }
+        # format.json { render json: @dish.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -58,7 +58,7 @@ class DishesController < ApplicationController
     @dish.destroy
     respond_to do |format|
       format.html { redirect_to dishes_url, notice: 'Dish was successfully destroyed.' }
-      format.json { head :no_content }
+      # format.json { head :no_content }
     end
   end
 
