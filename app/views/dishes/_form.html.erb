@@ -31,14 +31,6 @@
     <%= f.text_field :course_id, :readonly => true %>
   </div>
 
-  <!-- <div class="field">
-    <% if @dish.persisted? %>
-      <%= f.label :course_id %><br>
-      <%= f.collection_select :course_id, Course.all, :id, :name %>
-    <% else %>
-      <%= f.hidden_field :course_id, Course.all, :id, :name %>
-  </div> -->
-
   <div class="actions">
     <%= f.submit %>
   </div>
