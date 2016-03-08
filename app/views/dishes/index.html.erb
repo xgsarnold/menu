@@ -1,31 +1,35 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Dishes</h1>
+<h1>Menu</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Price</th>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Course</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @dishes.each do |dish| %>
-      <tr>
-        <td>$<%= dish.price %></td>
-        <td><%= link_to "#{dish.name}", edit_dish_path(dish) %></td>
-        <td><%= dish.description %></td>
-        <td><%= dish.course_id %></td>
-        <td><%= link_to 'Show', edit_dish_path(dish) %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<%= @courses.each do |course| %><br>
+<div>
+  <div>
+    <h4>
+      <%= link_to "#{course.name}", new_dish_path %><br>
+      <% if course.id == 1 %>
+        <%= image_tag asset_url("cherry.png"), id: "course_1" %>
+      <% elsif course.id == 2 %>
+        <%= image_tag asset_url("bamboo.png"), id: "course_2" %>
+      <% elsif course.id == 3 %>
+        <%= image_tag asset_url("torii.png"), id: "course_3" %>
+      <% elsif course.id == 4 %>
+        <%= image_tag asset_url("tea.png"), id: "course_4" %>
+      <% elsif course.id == 5 %>
+        <%= image_tag asset_url("enso.png"), id: "course_5" %>
+      <% end %>
+  </div>
+  <div>
+      <%= course.dishes.each do |dish| %>
+      <p>$<%= dish.price %></p>
+      <p><%= link_to "#{dish.name}", edit_dish_path(dish) %></p>
+      <p><%= dish.description %></p>
+      <p><%= link_to 'Show', edit_dish_path(dish) %></p><br>
+      <% end %>
+  </div>
+</h4>
+</div>
+<% end %>
 
 <br>
-
 <%= link_to 'New Dish', new_dish_path %>
