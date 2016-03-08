@@ -1,7 +1,19 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Course.create(name: "Appetizers")
+Course.create(name: "Small Plates")
+Course.create(name: "Entrees")
+Course.create(name: "Desserts")
+Course.create(name: "Drinks")
+
+Dish.create(price: 7.00, name: "Mushroom Tempura", description: "Local oyster mushrooms with pine nuts, pine snow, and porcini dipping sauce.", course_id: 1)
+Dish.create(price: 5.00, name: "Spicy Boiled Peanuts", description: "Boiled then matched with Fresno chilis and scallions and drizzled with soy sauce.", course_id: 1)
+Dish.create(price: 10.00, name: "Short Rib Wontons", description: "Braised beef with pepper-basil jam, cilantro, and creamed chevre.", course_id: 1)
+Dish.create(price: 8.00, name: "Lamb Belly Buns", description: "Braised lamb belly with pickled vegetables, honey soy, and fresh herbs.", course_id: 2)
+Dish.create(price: 8.00, name: "Spicy Squid", description: "Squid stirfried with kim chi and scallions.", course_id: 2)
+Dish.create(price: 10.00, name: "Steamed Buns", description: "Fried chicken inside sesame buns with kim chi pickles, gochujang aioli, and sriracha.", course_id: 2)
+Dish.create(price: 12.00, name: "Soy Tonkotsu Ramen", description: "Served with oyster mushrooms, scallions, pork jowl and a soft cooked egg.", course_id: 3)
+Dish.create(price: 12.00, name: "Korean Fried Chicken", description: "Chili glazed chicken fried in duck fat, served with turnip slaw and bibb lettuce.", course_id: 3)
+Dish.create(price: 12.00, name: "Duck and Curry Fried Rice", description: "Smoked duck slices stirfried with curry rice and scallion. Served with swiss chard.", course_id: 3)
+Dish.create(price: 8.00, name: "Green Tea Coconut Ice Cream", description: "Dissolved matcha powder with coconut shavings in locally sourced, graze fed cow's milk.", course_id: 4)
+Dish.create(price: 8.00, name: "Red Bean Soup", description: "Japanese red bean soup made with Azuki beans and garnished with steeped gyokuro leaves.", course_id: 4)
+Dish.create(price: 7.00, name: "Shochu", description: "Shochu is a distilled alcoholic beverage imported directly from Japan. Shochu is made with distilled alcohol and is in the same category as whiskey, scotch, and vodka.", course_id: 5)
+Dish.create(price: 7.00, name: "East Manhattan", description: "Made with Yamazaki 18YO, bitters, house-made club soda and a cherry. A very fine and very old Japanese whisky, the Yamazaki 18 Year Old is a brilliant single malt that proves that this newer style of whiskey can be complex.", course_id: 5)

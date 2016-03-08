@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :dishes
-  
+
   root 'dishes#index'
 
   get 'greeting/index'
