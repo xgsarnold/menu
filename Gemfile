@@ -35,7 +35,7 @@ gem 'puma'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  
+
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
 end
@@ -53,4 +53,8 @@ group :production do
   gem 'pg'
 
   gem 'rails_12factor'
+
+  gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
+  
+  gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
 end
