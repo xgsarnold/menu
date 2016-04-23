@@ -1,35 +1,36 @@
 <p id="notice"><%= notice %></p>
+<body>
+  <h1>Ensō</h1>
 
-<h1>Menu</h1>
-
-<% @courses.each do |course| %><br>
-<div>
+  <% @courses.each do |course| %><br>
   <div>
-    <h4>
-      <%= course.name %><br>
-      <h6>
-      <%= link_to "Add Dish", new_dish_path(course_id: course.id) %><br>
-    </h6>
-      <% if course.id == 1 %>
-        <%= image_tag asset_url("cherry.png"), id: "course_1" %>
-      <% elsif course.id == 2 %>
-        <%= image_tag asset_url("bamboo.png"), id: "course_2" %>
-      <% elsif course.id == 3 %>
-        <%= image_tag asset_url("torii.png"), id: "course_3" %>
-      <% elsif course.id == 4 %>
-        <%= image_tag asset_url("tea.png"), id: "course_4" %>
-      <% elsif course.id == 5 %>
-        <%= image_tag asset_url("enso.png"), id: "course_5" %>
-      <% end %>
+    <div>
+      <h4>
+        <%= course.name %><br>
+        <h6>
+        <%= link_to "Add Dish", new_dish_path(course_id: course.id) %><br>
+      </h6>
+        <% if course.id == 1 %>
+          <%= image_tag asset_url("cherry.png"), id: "course_1" %>
+        <% elsif course.id == 2 %>
+          <%= image_tag asset_url("bamboo.png"), id: "course_2" %>
+        <% elsif course.id == 3 %>
+          <%= image_tag asset_url("torii.png"), id: "course_3" %>
+        <% elsif course.id == 4 %>
+          <%= image_tag asset_url("tea.png"), id: "course_4" %>
+        <% elsif course.id == 5 %>
+          <%= image_tag asset_url("enso.png"), id: "course_5" %>
+        <% end %>
+    </div>
+    <div>
+        <% course.dishes.each do |dish| %>
+        <p>$<%= dish.price %></p>
+        <p><%= link_to "#{dish.name}", edit_dish_path(dish) %></p>
+        <p><%= dish.description %></p>
+        <p><%= link_to 'Show', edit_dish_path(dish) %></p><br>
+        <% end %>
+    </div>
+  </h4>
   </div>
-  <div>
-      <% course.dishes.each do |dish| %>
-      <p>$<%= dish.price %></p>
-      <p><%= link_to "#{dish.name}", edit_dish_path(dish) %></p>
-      <p><%= dish.description %></p>
-      <p><%= link_to 'Show', edit_dish_path(dish) %></p><br>
-      <% end %>
-  </div>
-</h4>
-</div>
-<% end %>
+  <% end %>
+</body>
